@@ -1,3 +1,29 @@
+## Instructivo para levantar la aplicación.
+
+1) Primero clonamos el repositorio a nuestro equipo local.
+git clone https://github.com/AlfreMu/angular-realworld-example-app.git
+
+2) Ingresamos al directorio donde lo clonamos.
+cd angular-realworld-example-app
+
+3) Hacer Docker Compose (asegurarse de tener el docker engine prendido).
+docker compose up -d
+
+4) Abrir en el navegador: 
+http://localhost:8080
+
+Si quisieramos levantarla con Kubernetes, debemos asegurarnos de tener la opcion de Kubernetes activada dentro de nuestro Docker Desktop, y aplicar los 3 manifiestos:
+
+kubectl apply -f k8s/namespace.yml
+kubectl apply -f k8s/deployment.yml
+kubectl apply -f k8s/service.yml
+
+En este caso accederiamos desde http://localhost:30080, ya que esta definido en el service.yml como nodePort: 30080.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
 [![RealWorld Frontend](https://img.shields.io/badge/realworld-frontend-%23783578.svg)](https://realworld.show)
 [![Build Status](https://travis-ci.org/gothinkster/angular-realworld-example-app.svg?branch=master)](https://travis-ci.org/gothinkster/angular-realworld-example-app)
 
