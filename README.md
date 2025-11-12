@@ -14,9 +14,9 @@ http://localhost:8080
 
 Si quisieramos levantarla con Kubernetes, debemos asegurarnos de tener la opcion de Kubernetes activada dentro de nuestro Docker Desktop, y aplicar los 3 manifiestos:
 
-kubectl apply -f k8s/namespace.yml
-kubectl apply -f k8s/deployment.yml
-kubectl apply -f k8s/service.yml
+- kubectl apply -f k8s/namespace.yml
+- kubectl apply -f k8s/deployment.yml
+- kubectl apply -f k8s/service.yml
 
 En este caso accederiamos desde http://localhost:30080, ya que esta definido en el service.yml como nodePort: 30080.
 
