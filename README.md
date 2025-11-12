@@ -3,13 +3,13 @@
 1) Primero clonamos el repositorio a nuestro equipo local.
 git clone https://github.com/AlfreMu/angular-realworld-example-app.git
 
-2) Ingresamos al directorio donde lo clonamos.
+3) Ingresamos al directorio donde lo clonamos.
 cd angular-realworld-example-app
 
-3) Hacer Docker Compose (asegurarse de tener el docker engine prendido).
+5) Hacer Docker Compose (asegurarse de tener el docker engine prendido).
 docker compose up -d
 
-4) Abrir en el navegador: 
+7) Abrir en el navegador: 
 http://localhost:8080
 
 Si quisieramos levantarla con Kubernetes, debemos asegurarnos de tener la opcion de Kubernetes activada dentro de nuestro Docker Desktop, y aplicar los 3 manifiestos:
